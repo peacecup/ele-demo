@@ -1,0 +1,50 @@
+$color: blue;
+
+//设定背景图片以及大小样式
+@mixin bgImg($url)
+{
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100%,100%;
+    background-size: cover;
+}
+
+@mixin setWH($width,$height){
+	width: $width;
+	height: $height;
+}
+
+@mixin posFixed($top,$left,$right,$bottom){
+	position: fixed;
+	top: $top;
+	left: $left;
+	right: $right;
+    bottom: $bottom;
+}
+
+@mixin setAbsolute($top,$left,$right,$bottom){
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+    bottom: $bottom;
+
+}
+
+@mixin setRelative($top,$left,$right,$bottom){
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+    bottom: $bottom;
+
+}
+
+@mixin flex($display,$flex-direction,$justify-content,$align-items){
+	display: $display;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+
+}
+

@@ -1,0 +1,146 @@
+@import '../common/mixin.scss';
+
+.map_container {
+	width: 100%;
+	height: 120%;
+	overflow-y: scroll;
+	@include flex(flex,column,flex-start,stretch);
+	
+	.map_content {
+		z-index: 1000;
+	    flex-basis: 500px;
+	    @include bgImg('https://faas.elemecdn.com/desktop/media/img/map.a76df5.png');
+	    @include flex(flex,row,flex-start,stretch);
+
+	    .map_qiaodan{
+	    	flex: 4;
+	        @include flex(flex,row,center,flex-end);
+	        img{
+	        	width: 313px;
+	        	height: 350;
+	        	transform: scale(1);
+	        }	
+
+	    }
+	    .map_place{
+	    	flex: 6;
+	    	@include flex(flex,column,flex-start,stretch);
+	    	.map_icon{
+	    		flex: 3;
+	    		align-self: flex-start;
+	    		@include flex(flex,column,flex-end,center);
+	    		img{
+	    			 width: 270px; 
+	    			 height: 60px;
+	    		}
+	    	}
+	    	.map_form{
+	    		flex: 2;
+	    		margin-left: -180px;
+	    		/* align-self:flex-start;	 */
+	    		@include flex(flex,row,flex-start,center);
+	    		:nth-child(2){
+	    			flex-basis: 560px;
+	    		}
+	    		.map_search{
+	    			background-color: red;
+	    			font-size: 20px;
+	    			text-align: center;
+	    			width: 160px;
+	    			line-height: 57px;
+	    			margin-left: 20px;
+	    			border-radius: 5px;
+	    			cursor: pointer;
+	    			&:hover{
+	    			    background-color: #e62625;
+	    			}
+	    			span{
+	    				color: #fff;
+	    			}
+	    		}
+	    	}
+	    	.map_liubai{
+	    		flex: 3;
+
+	    	}
+	    }
+    }
+    .map_footer{
+	    flex-basis:404px;
+	    /*页脚 主轴y从上带下 纵轴x在中间*/
+	    @include flex(flex,column,flex-start,center);
+	    .map_app{
+	    	flex-basis:315px;
+            width: 450px;
+	    	margin: 60px 50px;
+	    	/*app信息 主轴x在中间 纵轴y全部填满*/
+	    	@include flex(flex,row,center,center);
+	    	.map_qrcode{
+	    		flex-basis: 150px;
+	    		border: 1px solid #ddd;
+	    		padding:15px;
+	    		/*二维码 主轴y在中间 纵轴x在中间*/
+	    		@include flex(flex,column,center,center);
+	    		img{
+	    			width: 128px;
+	    			height: 128px;
+	    		}
+	    		span{
+	    			margin-bottom: -25px;
+	    			background-color: #F5F5F5;
+	    			padding: 0 10px;
+	    		}
+
+	    	}
+	    	.map_app_text{
+	    		flex: 5;
+	    		/*二维码 主轴y在中间 纵轴x在中间*/
+	    		margin-left: 20px;
+	    		@include flex(flex,column,center,flex-start);
+	    		p{
+	    			font-size: 15spx;
+	    		}
+	    		strong{
+	    			font-size: 30px;
+	    			color: red;
+	    		}
+	    	}
+
+
+	    }
+	    .map_link{
+	    	flex-basis:15px;
+	    	font-size: 12px;
+	    	color: #666;
+	    	text-align: center;
+	    	line-height: 1;
+	    	a{
+	    		display: inline-block;
+	    		padding: 0 7px;
+	    		color: inherit;
+	    		border-left: 1px solid #ccc;
+	    	}
+
+	    }
+	    .map_copyright{
+	    	flex-basis:15px;
+	    	text-align: center;
+	    	font-size: 	12px;
+	    	color: #999;
+
+	    }
+	    .map_police{
+	    	flex-basis:50px;
+	    	margin-top: 15px;
+	    	text-align: center;
+	    	a{
+	    		text-decoration: none;
+	    		color: #0089dc;
+	    		img{
+	    		    width: 86px;
+	    		    height: 30px;
+	    	    }
+	    	}
+	    }
+    }
+}

@@ -1,0 +1,20 @@
+
+/*s设定home页输入框行高*/
+.map_form .el-input--large .el-input__inner{
+	height: 55px;
+}
+
+/*城市弹出框距离弹出键的距离*/
+.el-popover[x-placement^=bottom]{
+	margin-top: 20px;
+}
+
+/*设置城市弹出框中，猜测城市的字体为黑色*/
+.city_guess button span{
+	color: white;
+}
+
+/*设置城市弹出框padding为0，可以让滚动条贴紧右边没有缝隙*/
+.el-popover{
+	padding: 0;
+}

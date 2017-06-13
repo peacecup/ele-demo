@@ -1,0 +1,110 @@
+@import '../common/mixin.scss';
+
+.map_cities{
+	height: 420px;
+	overflow: scroll;
+	@include flex(flex,column,flex-start,stretch);
+	.city_title{
+		flex-basis: 45px;
+		border-bottom: 1px solid #eee;
+		font-size: 14px;
+		padding: 0 25px;
+		@include flex(flex,row,space-between,center);
+	}
+	.city_guess{
+		flex-basis: 65px;
+		font-size: 18px;
+		border-bottom: 1px solid #eee;
+		padding: 25px;
+		@include flex(flex,row,flex-start,center);
+		p{
+			color: #0089dc;
+			flex-basis:80px;
+		}
+		.city_search{
+			flex-basis: 250px;
+
+			padding-left: 30px;
+			margin-left: 30px;
+			/* margin-right: 60px; */
+			border-left: 1px solid #ddd;
+
+		}
+	}
+	.city_list{
+		flex: 1;
+		padding: 0 25px;
+		@include flex(flex,colunm,flex-start,stretch);
+		.city_block{
+			@include flex(flex,row,flex-start,stretch);
+			border-bottom: 1px solid #ddd;
+			margin-top: 20px;
+			.city_letter{
+				flex-basis: 75px;
+				font-size: 20px;
+				color: #0089dc;
+			}
+			.cities{
+				flex: 1;
+				@include flex(flex,row,flex-start,stretch);
+				flex-wrap: wrap;
+				.city{
+					flex-basis: 50px;
+					font-size: 15px;
+					margin-left: 15px;
+					margin-bottom: 10px;
+					cursor: pointer;
+					&:hover{
+						color: #0089dc;
+					}
+
+				}
+			}
+		}
+	}
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar {  
+    width: 4px;  
+    height: 0px;  
+    background-color: #ddd;  
+}
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track {  
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+    border-radius: 4px;  
+    background-color: white;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb {  
+    border-radius: 4px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #555;  
+}
+
+.search_city {
+    li {
+        line-height: normal;
+        padding: 7px;
+        @include flex(flex,row,flex-between,stretch);
+        .name {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .addr {
+          font-size: 12px;
+          color: #b4b4b4;
+        }
+    
+        .highlighted .addr {
+          color: #ddd;
+        }
+    }
+    /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+    ::-webkit-scrollbar {  
+        width: 0px;  
+        height: 0px;   
+    }
+}
