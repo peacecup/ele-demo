@@ -14,7 +14,20 @@
 	color: white;
 }
 
-/*设置城市弹出框padding为0，可以让滚动条贴紧右边没有缝隙*/
+
 .el-popover{
+	/*设置城市弹出框padding为0，可以让滚动条贴紧右边没有缝隙*/
 	padding: 0;
+    /*设置最小宽度食用油100，想要表情小，可以重新设置*/
+	min-width: 100px;
 }
+/* 覆盖导航条的颜色
+.el-menu{
+    background-color: #1e89e0;
+}
+.el-menu-item{
+	color: #fff;
+}
+.el-menu-item:hover{
+	background-color: #1e89e0;
+} */

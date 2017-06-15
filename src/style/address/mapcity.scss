@@ -3,20 +3,20 @@
 .map_cities{
 	height: 420px;
 	overflow: scroll;
-	@include flex(flex,column,flex-start,stretch);
+	@include flex(column,flex-start,stretch);
 	.city_title{
 		flex-basis: 45px;
 		border-bottom: 1px solid #eee;
 		font-size: 14px;
 		padding: 0 25px;
-		@include flex(flex,row,space-between,center);
+		@include flex(row,space-between,center);
 	}
 	.city_guess{
 		flex-basis: 65px;
 		font-size: 18px;
 		border-bottom: 1px solid #eee;
 		padding: 25px;
-		@include flex(flex,row,flex-start,center);
+		@include flex(row,flex-start,center);
 		p{
 			color: #0089dc;
 			flex-basis:80px;
@@ -34,9 +34,9 @@
 	.city_list{
 		flex: 1;
 		padding: 0 25px;
-		@include flex(flex,colunm,flex-start,stretch);
+		@include flex(colunm,flex-start,stretch);
 		.city_block{
-			@include flex(flex,row,flex-start,stretch);
+			@include flex(row,flex-start,stretch);
 			border-bottom: 1px solid #ddd;
 			margin-top: 20px;
 			.city_letter{
@@ -46,7 +46,7 @@
 			}
 			.cities{
 				flex: 1;
-				@include flex(flex,row,flex-start,stretch);
+				@include flex(row,flex-start,stretch);
 				flex-wrap: wrap;
 				.city{
 					flex-basis: 50px;
@@ -88,7 +88,7 @@
     li {
         line-height: normal;
         padding: 7px;
-        @include flex(flex,row,flex-between,stretch);
+        @include flex(row,flex-between,stretch);
         .name {
           text-overflow: ellipsis;
           overflow: hidden;

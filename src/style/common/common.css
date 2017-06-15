@@ -1,3 +1,12 @@
+@font-face {
+    font-family: eleme;
+    src: url(//faas.elemecdn.com/desktop/media/font/eleme.6f8da4.eot);
+    src: local('☺︎'),url(//faas.elemecdn.com/desktop/media/font/eleme.a61c32.woff) format('woff'),url(//faas.elemecdn.com/desktop/media/font/eleme.8e5aeb.ttf) format('truetype'),url(//faas.elemecdn.com/desktop/media/font/eleme.94ccdd.svg#eleme) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+
 body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
     padding: 0;
     margin: 0;
@@ -7,7 +16,7 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     border: none;
     color: #333;  
     box-sizing: border-box;
-    font-family: "Microsoft Yahei",sans-serif;
+    font-family: "eleme","Microsoft Yahei",sans-serif;
     -webkit-tap-highlight-color:transparent;
     -webkit-font-smoothing: antialiased;
     &:focus {
@@ -96,3 +105,4 @@ html,body{
 .paddingTop{
     padding-top: 1.95rem;
 }
+

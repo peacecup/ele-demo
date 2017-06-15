@@ -1,0 +1,148 @@
+@import '../common/mixin.scss';
+.head{
+	@include setWH(100%,60px);
+	background-color: #1e89e0;
+	font-size: 16px;
+	@include flex(row,flex-start,center);
+    .icon{
+    	&:before{
+		    flex-basis:105px;
+		    content: "\e92c";
+	        color: #fff;
+	        margin-left: 152px;
+	        margin-right:18px;
+	        font-size: 32px;
+	        cursor: pointer;
+	    }    
+    }
+	.nav_one{
+		flex-basis: 402px;
+		@include flex(row,flex-start,stretch);
+		a{
+			color: #fff;
+			@include setFlexWH(134px,60px);
+			@include flex(row,center,center);
+			&:hover{
+	    	    background-color: #0c77d1;
+	        }
+		}
+		:nth-child(1){
+			flex-basis: 112px;
+		}
+	}
+	.nav_two{
+		flex-basis: 320px;
+		margin-left: 150px;
+		font-size: 14px;
+		@include flex(row,flex-start,stretch);
+		a{
+			flex-basis: 106px;
+	        height: 60px;
+	        color: #d2e7f9;
+	        cursor: pointer;
+	        @include flex(row,center,center);//\e92e
+	        &:hover{
+	    	    color: #fff;
+	        }
+		}
+		:nth-child(1){
+			&:before{
+				content:'\e94a';
+				font-size: 20px;
+				margin-top: 5px;
+				margin-right: 3px;
+			}
+		}
+		:nth-child(3){
+			&:before{
+				content:'\e92e';
+				font-size: 20px;
+				margin-top: 5px;
+				margin-right: 3px;
+			}
+		}
+
+	}
+	.nav_three{
+		flex-basis:100px;
+		margin-left: 100px;
+		font-size: 16px;
+		cursor: pointer;
+		span{
+			color: #fff;
+			@include flex(row,flex-start,center);
+			&:after{
+			    content:'\e904';
+				font-size: 20px;	
+				margin-top: 5px;
+				margin-left: 8px;
+				background-color: #449be5;
+				border-radius: 5px;
+				color: #fff;
+		}
+		}
+		
+	}
+}
+.ercode{
+	width: 100%;
+	padding: 10px;
+	@include flex(column,flex-start,center);
+	span{
+		line-height: 30px;
+		font-size: 16px;
+		color: #333;
+		font-weight: 700;
+	}
+	img{
+		width: 190px;
+		height: 190px;
+	}
+}
+.user{
+	width: 100%;
+	color: #999;
+	padding: 4px 6px;
+	@include flex(column,flex-start,center);
+	a{
+		color: #666;
+		font-size: 14px;
+		line-height: 32px;
+		padding: 0 15px;
+		&:hover{
+			background-color: #f1f1f1;
+		}
+	}
+	:nth-child(1){
+		&:before{
+			content:'\e945';
+			font-size: 16px;
+		}
+	}
+	:nth-child(2){
+		&:before{
+			content:'\e950';
+			font-size: 16px;
+		}
+	}
+	:nth-child(3){
+		&:before{
+			content:'\e928';
+			font-size: 16px;
+		}
+	}
+	:nth-child(4){
+		&:before{
+			content:'\e94b';
+			font-size: 16px;
+		}
+	}
+	:nth-child(6){
+		&:before{
+			content:'\e92d';
+			font-size: 16px;
+		}
+	}
+
+
+}

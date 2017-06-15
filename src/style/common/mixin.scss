@@ -1,5 +1,3 @@
-$color: blue;
-
 //设定背景图片以及大小样式
 @mixin bgImg($url)
 {
@@ -8,12 +6,12 @@ $color: blue;
     background-size: 100%,100%;
     background-size: cover;
 }
-
+//设定高宽
 @mixin setWH($width,$height){
 	width: $width;
 	height: $height;
 }
-
+//设定相对浏览器的定位
 @mixin posFixed($top,$left,$right,$bottom){
 	position: fixed;
 	top: $top;
@@ -21,30 +19,32 @@ $color: blue;
 	right: $right;
     bottom: $bottom;
 }
-
+//设定absolute相对定位
 @mixin setAbsolute($top,$left,$right,$bottom){
 	position: absolute;
 	top: $top;
 	left: $left;
 	right: $right;
     bottom: $bottom;
-
 }
-
+//设定relative相对定位
 @mixin setRelative($top,$left,$right,$bottom){
 	position: absolute;
 	top: $top;
 	left: $left;
 	right: $right;
     bottom: $bottom;
-
 }
-
-@mixin flex($display,$flex-direction,$justify-content,$align-items){
-	display: $display;
+//设定flex弹性定位
+@mixin flex($flex-direction,$justify-content,$align-items){
+	display: flex;
 	flex-direction: $flex-direction;
 	justify-content: $justify-content;
 	align-items: $align-items;
-
+}
+//设定基于flex的占位空间
+@mixin setFlexWH($flex-basis,$height){
+	flex-basis: $flex-basis;
+	height: $height;
 }
 

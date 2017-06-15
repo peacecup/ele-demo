@@ -1,0 +1,126 @@
+@import '../common/mixin.scss';
+.footer{
+	@include setWH(100%,300px);
+	@include flex(column,flex-start,stretch);
+	.options{
+		flex-basis:185px;
+		@include flex(row,space-between,center);
+		.links{
+			flex-basis:531px;
+			border-right: 1px solid #e6e6e6 ;
+			@include flex(row,space-between,stretch);
+			ul{
+				flex-basis:177px;
+				li{
+					cursor: pointer;
+					color: #999;
+					line-height: 24px;
+					font-size: 12px;
+				}
+				:nth-child(1){
+					cursor: default;
+					color: #333;
+					font-size: 14px;
+					line-height: 30px;
+				}
+			}
+		}
+		.contact{
+			flex-basis: 271px;
+			@include flex(row,center,center);
+			ul{
+				li{
+					color: #666;
+					font-size: 14px;
+					margin-bottom: 12px;
+					.icon-wechat{
+						color: #ccc;
+						&:before{
+							content: '\e96a';
+							font-size: 24px;
+							vertical-align: top;
+							cursor: pointer;
+						}
+						&:hover{
+							color: #77d175;
+						}
+					}
+					.icon-weibo{
+						color: #ccc;
+						&:before{
+							content: '\e96b';
+							font-size: 24px;
+							vertical-align: top;
+							cursor: pointer;
+						}
+						&:hover{
+							color: #fb545f;
+						}
+					}
+				}
+			}
+		}
+		.ercode{
+			flex:1;
+			@include flex(row,center,center);
+			img{
+				@include setWH(90px,90px);
+				margin-right: 20px;
+			}
+			ul{
+				li{
+					cursor: pointer;
+					color: #999;
+					line-height: 24px;
+					font-size: 12px;
+				}
+				:nth-child(1){
+					cursor: pointer;
+					color: #333;
+					line-height: 30px;
+					font-size: 16px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.police{
+		flex:1;
+		padding-top: 60px;
+		ul{
+			@include setWH(100%,100%);
+			@include flex(column,space-between,center);
+		}
+		:nth-child(1){
+				flex-basis: 15px;
+				font-weight: 400;
+				color: #0e0e0e;
+				font-size:8px;
+			}
+			:nth-child(2){
+				flex-basis: 18px;
+				font-size: 12px;
+				P{
+					color: #999;
+					a{
+						color: #999;
+					}
+				}
+			}
+			:nth-child(3){
+				padding: 10px;
+				flex: 1;	
+				img{
+					@include setWH(87px,30px)
+				}
+			}
+	}
+}
+.elemeorder{
+    @include flex(column,flex-start,center);
+    span{
+    	font-size: 14px;
+    	color: #999;
+    	font-weight: 400;
+    }
+}

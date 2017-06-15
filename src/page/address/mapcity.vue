@@ -110,5 +110,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../style/home/mapcity.scss'
+@import '../../style/address/mapcity.scss'
 </style>
