@@ -39,9 +39,11 @@ export default {
 
 	},
 	mounted(){
-		let address = localStorage.getItem('address')
-		this.addr = JSON.parse(address);
-
+		var tempaddr = this.$store.state.address;
+		if(!tempaddr){
+			tempaddr = localStorage.getItem('address');
+		}
+		this.addr = JSON.parse(tempaddr);
 	}
 }
 </script>

@@ -7,7 +7,7 @@ import actions from './actions'
 
 Vue.use(Vuex);
 const state = {
-	address: {}
+	address: ''
 }
 
 export default new Vuex.Store({

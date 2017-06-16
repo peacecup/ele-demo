@@ -22,8 +22,8 @@ export default async(type,url,data) => {
 		validateStatus: function(status){
             return status >= 200 && status < 300;//默认
         },
-        //超过10秒，请求停止
-        timeout:2000,
+        //超过10秒，请求停止,不打开了，超市不显示数据很蛋疼
+        //timeout:2000,
     }
     if(type == 'GET'){
     	config.params =data;

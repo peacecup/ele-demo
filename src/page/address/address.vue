@@ -136,7 +136,7 @@ export default {
 		handleSelect(item){
 			localStorage.setItem('address',JSON.stringify(item));
 			//这里不需要用到vuex来存储当前地址，刷新的时候就会消失
-			//this.$store.dispatch(SET_ADDRESS);
+			this.$store.dispatch(SET_ADDRESS);
 			this.$router.push({path: '/home'});
 		}
 	}

@@ -9,6 +9,7 @@ import {
 Vue.use(VueRouter);
 const address = r => require.ensure([], () => r(require('../page/address/address.vue')), 'address');
 const home = r => require.ensure([], () => r(require('../page/home/home.vue')), 'home');
+const shop = r => require.ensure([], () => r(require('../page/shop/shop.vue')), 'shop');
 
 
 export default new VueRouter({
@@ -21,7 +22,8 @@ export default new VueRouter({
         	component: home,
         	children: [
         	    {
-        	    	path:''
+        	    	path:'',
+                    component: shop
         	    }
         	]
         }
