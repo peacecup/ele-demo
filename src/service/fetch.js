@@ -1,6 +1,7 @@
 import { baseUrl } from '../config/env';
 
 import axios from 'axios';
+import { Loading } from 'element-ui';
 
 
 export default async(type,url,data) => {
@@ -30,8 +31,14 @@ export default async(type,url,data) => {
     }else{
     	config.data = data;
     }
+    let loadingInstance  = Loading.service({
+    	fullscreen:true,
+    	lock: true,
+    	text: '加載中！'
+    });
     var response = await axios(config);
     result = response.data;
+    loadingInstance.close();
     return result;
 	
 }

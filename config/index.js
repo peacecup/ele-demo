@@ -41,7 +41,7 @@ module.exports = {
             '/eus'
         ],
         //饿了么代理地址
-        proxypath: 'https://mainsite-restapi.ele.me',
+        proxypath: 'https://www.ele.me/restapi',
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

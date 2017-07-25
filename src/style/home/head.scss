@@ -1,5 +1,7 @@
 @import '../common/mixin.scss';
 .head{
+	position: fixed;
+	z-index: 200;
 	@include setWH(100%,60px);
 	background-color: #1e89e0;
 	font-size: 16px;
